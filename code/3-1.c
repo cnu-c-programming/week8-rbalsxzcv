@@ -3,7 +3,7 @@
 
 int main() {
     
-    char *names[] = {"apple", "mange","ant","banana","cat","anaconda"};
+    char *names[] = {"apple", "mango","ant","banana","cat","anaconda"};
     int n = sizeof(names) / sizeof(names[0]);
 
     int i = 0, count = 0;
