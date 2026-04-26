@@ -3,21 +3,17 @@
 
 int main(int argc, char *argv[]) {
 
-    int i = 0, count = 0;
-    while (count != (argc-1)*(argc))
-    {
-        if(strcmp(*(argv+i),*(argv+i+1))==1){
-            char* tmp = *(argv+i);
-            *(argv+i) = *(argv+i+1);
-            *(argv+i+1) = tmp;
+    char* tmp;
+    for(int i = 0;i<argc-1;i++){
+        for(int j = 0;j<argc-1-i;j++){
+            if(strcmp(*(argv+j),*(argv+j+1))==1){
+                tmp = *(argv+j);
+                *(argv+j) = *(argv+j+1);
+                *(argv+j+1) = tmp;
+            }
         }
-        if(i+2 == argc){
-            i = 0;
-        }else{ i++;}
-        count++;
     }
     
-
     for(int i = 0;i<argc;i++){
         printf("%s\n",argv[i]);
     }
