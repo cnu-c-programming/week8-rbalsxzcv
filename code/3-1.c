@@ -7,7 +7,7 @@ int main() {
     int n = sizeof(names) / sizeof(names[0]);
 
     int i = 0, count = 0;
-    while (count != (n-1)*(n-1))
+    while (count < (n-1)*(n-1))
     {
         if(strcmp(*(names+i),*(names+i+1))==1){
             char* tmp = *(names+i);
