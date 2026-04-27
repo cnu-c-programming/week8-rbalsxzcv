@@ -9,6 +9,7 @@ int main() {
     char **arr = names;
     for(int i = 0;i<n-1;i++){
         for(int j = 0;j<n-1-i;j++){
+            printf("%d",strcmp(*(arr+j),*(arr+j+1)));
             if(strcmp(*(arr+j),*(arr+j+1))==1){
                 printf("%p 와 %p 교환\n",*(arr+j),*(arr+j+1));
                 char* tmp = *(arr+j);
